@@ -1,0 +1,175 @@
+.contact-page {
+    width: 100%;
+    padding: clamp(32px, 7vw, 88px) 20px;
+    background: linear-gradient(135deg, #fff8f5 0%, #fff 55%, #f8f9fc 100%);
+}
+
+.contact-card {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: clamp(32px, 6vw, 80px);
+    width: min(100%, 1050px);
+    margin: 0 auto;
+    padding: clamp(28px, 6vw, 64px);
+    border: 1px solid #f0eeec;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 18px 55px rgb(42 48 62 / 8%);
+}
+
+.contact-intro {
+    align-self: center;
+}
+
+.contact-eyebrow {
+    color: tomato;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+.contact-intro h1 {
+    margin: 12px 0;
+    color: #252a35;
+    font-size: clamp(30px, 4vw, 44px);
+    line-height: 1.15;
+}
+
+.contact-intro > p {
+    max-width: 390px;
+    margin: 0;
+    color: #69707d;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.contact-details {
+    display: grid;
+    gap: 14px;
+    margin-top: 32px;
+}
+
+.contact-details p {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0;
+    color: #49557e;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+.contact-details i {
+    color: tomato;
+    font-size: 18px;
+}
+
+.contact-form {
+    display: grid;
+    gap: 18px;
+}
+
+.contact-field {
+    display: grid;
+    gap: 7px;
+}
+
+.contact-field label {
+    color: #343a46;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.contact-field input,
+.contact-field textarea {
+    width: 100%;
+    min-width: 0;
+    padding: 12px 14px;
+    border: 1px solid #dedfe4;
+    border-radius: 8px;
+    outline: none;
+    background: #fff;
+    color: #252a35;
+    font: inherit;
+    font-size: 14px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-field input::placeholder,
+.contact-field textarea::placeholder {
+    color: #9a9eaa;
+}
+
+.contact-field textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.contact-field input:focus,
+.contact-field textarea:focus {
+    border-color: tomato;
+    box-shadow: 0 0 0 3px rgb(255 99 71 / 14%);
+}
+
+.contact-field [aria-invalid="true"] {
+    border-color: #c62828;
+}
+
+.contact-error {
+    color: #b42318;
+    font-size: 12px;
+}
+
+.contact-submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 48px;
+    margin-top: 2px;
+    padding: 12px 20px;
+    border: 0;
+    border-radius: 8px;
+    background: tomato;
+    color: #fff;
+    font: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.contact-submit:hover {
+    transform: translateY(-1px);
+    background: #e94d36;
+}
+
+.contact-submit:focus-visible {
+    outline: 3px solid rgb(255 99 71 / 35%);
+    outline-offset: 3px;
+}
+
+.contact-success {
+    margin: 0;
+    color: #217a45;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+@media (max-width: 700px) {
+    .contact-page {
+        padding: 28px 16px;
+    }
+
+    .contact-card {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 28px 22px;
+        border-radius: 14px;
+    }
+
+    .contact-details {
+        gap: 10px;
+        margin-top: 20px;
+    }
+}

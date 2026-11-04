@@ -1,0 +1,139 @@
+.logo {
+  height: 50px;
+  width: 150px;
+  object-fit: contain;
+}
+
+@media (min-width: 992px) {
+  .navbar > .container-fluid {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+  }
+
+  .navbar-collapse {
+    display: contents !important;
+  }
+
+  .navbar-nav {
+    grid-column: 2;
+    justify-self: center;
+  }
+
+  .nav-right {
+    grid-column: 3;
+    justify-self: end;
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+}
+
+.navbar-toggler {
+  border: 0;
+  padding: 0.375rem;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-nav .nav-link {
+  color: #49557E;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  color: #212529;
+}
+
+.nav-right .icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  background: transparent;
+  border: none;
+  color: #49557E;
+  font-size: clamp(20px, 2vw, 24px);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.nav-right .icon-btn:hover {
+  color: black;
+}
+
+.cart-icon-link {
+  position: relative;
+}
+
+.cart-dot {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: #e53935;
+}
+
+.signin-btn {
+  background-color: #49557E;
+  color: white;
+  border: none;
+  padding: 7px 18px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.signin-btn:hover {
+  background-color: black;
+}
+
+@media (max-width: 991.98px) {
+  .navbar > .container-fluid {
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .navbar-collapse {
+    flex-basis: 100%;
+    width: 100%;
+    padding-top: 0.5rem;
+  }
+
+  .navbar-nav {
+    width: 100%;
+  }
+
+  .nav-right {
+    width: 100%;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.5rem !important;
+    margin: 0.5rem 0 0.75rem !important;
+  }
+
+  .nav-right > * {
+    align-self: flex-start;
+  }
+
+  .nav-right .icon-btn {
+    padding: 0.25rem 0;
+    font-size: clamp(22px, 6vw, 26px);
+  }
+
+  .signin-btn {
+    min-height: 44px;
+  }
+
+  .logo {
+    width: min(150px, 42vw);
+  }
+}
