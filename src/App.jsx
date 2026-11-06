@@ -14,7 +14,7 @@ const App = () => {
   return (
     <>
       {showLogin && <Loginpopup setShowLogin={setShowLogin} />}
-      <Router>
+      <Router basename={import.meta.env.BASE_URL}>
         <StoreContextProvider>
           <Navbar setShowLogin={setShowLogin} />
           <Routes>

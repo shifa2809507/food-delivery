@@ -34,7 +34,16 @@ function Navbar({setShowLogin}) {
                                <Link className="nav-link" to='/' onClick={() => setMenuOpen(false)}>Home</Link>
                             </li>
                             <li className="nav-item" >
-                               <a className="nav-link" href="/#explore-menu" onClick={() => setMenuOpen(false)}>Menu</a>
+                               <Link
+                                   className="nav-link"
+                                   to="/#explore-menu"
+                                   onClick={() => {
+                                       setMenuOpen(false);
+                                       document.getElementById("explore-menu")?.scrollIntoView({ behavior: "smooth" });
+                                   }}
+                               >
+                                   Menu
+                               </Link>
                             </li>
                             <li className="nav-item">
                                    <a className="nav-link" href="/#app-download" onClick={() => setMenuOpen(false)}>Mobile-app</a>
